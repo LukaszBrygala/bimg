@@ -177,6 +177,9 @@ vips_type_find_save_bridge(int t) {
 	if (t == PNG) {
 		return vips_type_find("VipsOperation", "pngsave_buffer");
 	}
+	if (t == GIF) {
+		return vips_type_find("VipsOperation", "gifsave_buffer");
+	}
 	if (t == JPEG) {
 		return vips_type_find("VipsOperation", "jpegsave_buffer");
 	}

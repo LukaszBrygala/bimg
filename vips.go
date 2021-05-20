@@ -210,6 +210,9 @@ func VipsIsTypeSupportedSave(t ImageType) bool {
 	if t == PNG {
 		return int(C.vips_type_find_save_bridge(C.PNG)) != 0
 	}
+	if t == GIF {
+		return int(C.vips_type_find_save_bridge(C.GIF)) != 0
+	}
 	if t == TIFF {
 		return int(C.vips_type_find_save_bridge(C.TIFF)) != 0
 	}
